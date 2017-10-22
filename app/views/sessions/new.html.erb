@@ -1,6 +1,7 @@
 <div class="login-area">
+  <h3><%= notice %></h3>
   <h1>ログイン</h1>
-  <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+  <%= form_with(scope: :session, url: sessions_path) do |f| %>
     <table class="login-table">
       <tr>
         <td><%= f.label :メール %></td>

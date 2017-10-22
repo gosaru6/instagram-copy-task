@@ -23,8 +23,9 @@
         <td><%= f.file_field :image, id: :user_image %></td>
       </tr>
     </table>
-
-      <div class="user_btn"><%= f.submit "登録" %></div>
+      <div class="user_btn">
+        <%= f.submit "登録" %>
+      </div>
   <% end %>
   <% if @user.errors.any? %>
     <div id="error_explanation">

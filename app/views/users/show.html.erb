@@ -6,5 +6,6 @@
     <% if @user.image.present? %>
       <div class="user-img"><%= image_tag @user.image_url, :size => '300x300' %></div>
     <% end %>
+    <div class="user_btn"><%= link_to "一覧へ", blogs_path%></div>
   <% end %>
 </div>
