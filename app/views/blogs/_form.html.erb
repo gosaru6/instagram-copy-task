@@ -1,0 +1,31 @@
+<%= form_with(model: @blog, local: true) do |form| %>
+  <% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @blog.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+      <% @blog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-area">
+    <div>
+      <%= form.label :内容 %>
+    </div>
+    <div>
+      <%= form.text_area :content %>
+    </div>
+    <div class="field">
+      <%= form.label :画像 %>
+      <%= form.file_field :image, id: :board_image, class: 'field' %>
+    </div>
+    <div class="submit-button">
+      <%= form.submit :保存 %>
+    <div>
+  </div>
+    <%= link_to "戻る", blogs_path %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<div class="show-area">
+  <h1>詳細</h1>
+  <p>内容: <%= @blog.content %></p>
+  <% if @blog.image.present?%>
+    <p>画像</p>
+    <div class="favorite-img">
+      <%= image_tag @blog.image_url, :size => '300x300' %>
+    </div>
+  <% end %>
+  <div class="favorite-area">
+    <% unless @blog.user == current_user %>
+    <div>
+      <% if @favorite.present? %>
+        <%= link_to "お気に入りを解除する", favorite_path(blog_id: @blog.id), method: :delete, class: 'btn btn-danger' %>
+      <% else %>
+        <%= link_to "お気に入りにする", favorites_path(blog_id: @blog.id ), method: :post, class: 'btn btn-primary' %>
+      <% end %>
+      <%= link_to "戻る", blogs_path %>
+    <% end %>
+    </div>
+  </div>
+
+</div>

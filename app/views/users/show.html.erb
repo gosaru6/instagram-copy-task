@@ -1,0 +1,10 @@
+<div class="show-area">
+  <%= form_with(model: @user, local: true) do |form| %>
+    <h1><%= @user.name %>のページ</h1>
+
+    <p class="user_p">メールアドレス: <%= @user.email %></p>
+    <% if @user.image.present? %>
+      <div class="user-img"><%= image_tag @user.image_url, :size => '300x300' %></div>
+    <% end %>
+  <% end %>
+</div>

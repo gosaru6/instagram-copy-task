@@ -1,0 +1,15 @@
+<div class="favorite-index">
+  <h1>お気に入り一覧</h1>
+  <div class="favorite-content">
+    <% if @favorites.present? %>
+      <% @favorites.each do |t| %>
+        <p>名前: <%= t.user.name %>さん</p>
+        <p>内容: <%= t.content %></p>
+        <% if t.image.present?%>
+          <p>画像</p>
+          <div><%= image_tag t.image_url, :size => '300x300' %></div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

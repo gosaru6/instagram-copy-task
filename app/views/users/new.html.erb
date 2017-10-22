@@ -1,0 +1,39 @@
+<div class="user-new-area">
+  <h1>登録</h1>
+  <%= form_with(model: @user, local: true) do |f| %>
+    <table class="user-new-table">
+      <tr>
+        <td><%= f.label :名前 %></td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :メール %></td>
+        <td><%= f.email_field :email %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :パスワード %></td>
+        <td><%= f.password_field :password %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :パスワード確認 %></td>
+        <td><%= f.password_field :password_confirmation %></td>
+      </tr>
+      <tr class="field">
+        <td><%= f.label :画像 %></td>
+        <td><%= f.file_field :image, id: :user_image %></td>
+      </tr>
+    </table>
+
+      <div class="user_btn"><%= f.submit "登録" %></div>
+  <% end %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this @user from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

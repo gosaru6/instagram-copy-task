@@ -1,0 +1,125 @@
+.header, .show-area, .new-area, .form-area, .user-new-area,
+.login-area, .favorite-index {
+  padding-top: 100px;
+}
+
+.favorite-area {
+  margin-top: 50px;
+}
+
+.show-area, .new-area, .form-area, .login-area {
+  text-align: center;
+}
+
+.user-new-area h1 {
+  text-align: center;
+}
+
+.user-new-table, .login-table {
+  margin: auto;
+}
+
+.user_btn {
+  text-align: center;
+}
+
+.field {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%;
+}
+
+.image-area {
+  height: 400px;
+  width: 100%;
+}
+
+.contents-area {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  max-height: 600px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+.contents {
+  list-style: none;
+}
+
+.contents-area {
+  margin-bottom: 20px;
+}
+
+.contents-header {
+  border-bottom: 1px solid #efefef;
+  height: 50px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.contents-footer {
+  width: 600px;
+  max-height:120px;
+  padding-bottom: 10px;
+  overflow: scroll;
+}
+
+.sentence {
+  font-size: 20px;
+  color: #000000;
+}
+
+
+.edit-btn {
+  color: #000000;
+  background-color: #fafafa;
+  border: 1px solid #000000;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.edit-btn:hover {
+  color: #fff;
+  background-color: #000000;
+}
+
+.delete-btn {
+  background-color: #000000;
+  color: #fff;
+  border: 1px solid #000000;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.delete-btn:hover {
+  background-color: #fafafa;
+  color: #000000;
+  border: 1px solid #000000
+}
+
+.user-img, .blog-img {
+  margin: auto;
+  height: 300px;
+  width:300px;
+}
+
+.favorite-index h1 {
+  text-align: center;
+}
+
+.favorite-content {
+  height: 300px;
+  width: 300px;
+  display: inline;
+  text-align: center;
+}
